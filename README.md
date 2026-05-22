@@ -2,3 +2,4 @@ This project is a simple JavaScript concept practice  to understand difference t
 ## Concepts Practiced
 -Debounce
 -throttle
+-closure
