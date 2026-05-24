@@ -1,6 +1,7 @@
 const grandparent  = document.getElementById('grandParent')
 const parent = document.getElementById('parent')
 const child = document.getElementById('child')
+const navbars = document.getElementById('navbar')
 
 
 //event capture example
@@ -28,3 +29,11 @@ const child = document.getElementById('child')
 // child.addEventListener('click', (e) => {
 //      console.log('child');
 // });
+
+
+
+//event delegation
+navbars.addEventListener('click', (e) =>{
+    e.stopPropagation()
+    console.log(e.target.innerText);
+})

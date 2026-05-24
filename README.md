@@ -3,3 +3,4 @@ This project is a simple JavaScript concept practice  to understand difference t
 -Debounce
 -throttle
 -closure
+-Event bubbling capturing and delegation
