@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and Event capture</title>
+    <script src="./eventBubbling.js" defer></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        max-height: 100vh;
+        width: 100vw;
+        /* Blue starts at 0%, transitions to Purple at 30%, and ends with Pink at 100% */
+        background-image: linear-gradient(to right, rgb(128, 128, 215) 10%, rgb(205, 178, 205));
+
+    }
+
+    .container {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+    }
+
+    .grandParent {
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        background-color: aqua;
+    }
+
+    .parent {
+        border: 1px solid black;
+        width: 180px;
+        height: 160px;
+        padding: 10px;
+        background-color: bisque;
+    }
+
+    .child {
+        border: 1px solid black;
+        width: 160px;
+        height: 120px;
+        text-align: center;
+        background-color: tomato;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="grandParent" id="grandParent">
+            GrandParent
+            <div class="parent" id="parent">
+                Parent
+                <div class="child" id="child">
+                    Child
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

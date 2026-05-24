@@ -43,3 +43,4 @@ const account = createBankAccount('yash' , 5000)
 account.checkBalance()
 account.deposit(1000)
 account.withdraw(200)
+
