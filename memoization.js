@@ -1,13 +1,17 @@
 function calculateTotal(){
     let cache = {}
-    return function(n){
-        if(cache[n]){
-            return cache[n]
+    return function(arr){
+          // Convert array into unique string key
+         const key = JSON.stringify(arr)
+         //check cache
+        if(key in cache){
+             console.log("From cache");
+            return cache[key]
         }
-     let result =  n.reduce((acc , curr) =>{
+     let result =  arr.reduce((acc , curr) =>{
             return acc + curr
         },0)
-        cache[n] = result
+        cache[key] = result
         return result;
     }
 }
